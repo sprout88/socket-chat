@@ -7,18 +7,20 @@
 </head>
 
 <body>
-    <h1>socket.io 테스트</h1>
+    <h1>메세지 테스트</h1>
     
     <input type="text" id="input_msg">
     <button id="btn_send">메세지 전송</button>
 
     <button id="btn_disconnect">연결 종료</button>
+
 </body>
 
 <!-- socket.io 모듈이 제공하는 js스크립트 로드 -->
 <!-- node.js 상에서 "socket.io 객체 생성시 설정한 path"/socket.io.js로 접근해야 함 -->
 <script src="/socket.io/socket.io.js"></script>
 <script>
+    document.querySelector('#received');
 
     // 서버 socket 접속용 객체 생성 및 연결
     const socket = io.connect("http://127.0.0.1:8000", {path: "/socket.io", transports: ['websocket']});

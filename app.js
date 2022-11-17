@@ -6,7 +6,7 @@ const app = express();
 
 // # 라우팅 처리
 app.use("/", (req, res)=>{
-    res.sendFile(__dirname+ 'index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // # HTTP 서버 구동(port: 30001)
